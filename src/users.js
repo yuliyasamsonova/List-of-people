@@ -1,0 +1,29 @@
+export default [{
+    name: 'Вася',
+    surname: 'Петров',
+    birthday: '01.02.75'
+}, {
+    name: 'Петя',
+    surname: 'Сидоров',
+    birthday: '15.12.12'
+}, {
+    name: 'Коля',
+    surname: 'Смирнов',
+    birthday: '31.01.58'
+}, {
+    name: 'Ольга',
+    surname: 'Иванова',
+    birthday: '24.02.45'
+}, {
+    name: 'Мария',
+    surname: 'Соворова',
+    birthday: '04.05.63'
+}, {
+    name: 'Светлана',
+    surname: 'Жировна',
+    birthday: '01.08.85'
+}, {
+    name: 'Инесса',
+    surname: 'Кононова',
+    birthday: '01.10.99',
+},]

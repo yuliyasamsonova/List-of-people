@@ -1,28 +1,39 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import UserInfo from'./UserInfo/UserInfo' ;
+import users from "./users";
+import UserButtonList from "./UserButtonList/UserButtonList";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    constructor(props) {
+        super(props);
+        this.state = {
+            currentUser: {}
+        };
+    }
+    changeCurrentUser = (user)=> {
+            this.setState({currentUser: user});
+    }
+    render()
+    {
+        return (
+            <div className="App">
+                <div>
+                    <UserButtonList
+                        users={users}
+                        changeCurrentUser={this.changeCurrentUser}
+                    />
+                </div>
+                <div className="info">
+                    <UserInfo
+                        name={this.state.currentUser.name}
+                        surname={this.state.currentUser.surname}
+                        birthday={this.state.currentUser.birthday}
+                    />
+                </div>
+            </div>
+        );
+    }
 }
 
 export default App;
